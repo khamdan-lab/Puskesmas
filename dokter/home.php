@@ -1,0 +1,1 @@
+<h2>home <strong><?php echo $_SESSION['sebagai']; ?></strong></h2>
