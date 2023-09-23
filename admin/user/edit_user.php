@@ -1,6 +1,6 @@
 <?php include '../koneksi.php';	 ?>
 <h2 class="text-center"> Edit Data User </h2>
-<?php $ambil = mysqli_query($koneksi,"SELECT * FROM user WHERE id_user = '$_GET[id]'"); 
+<?php $ambil = mysqli_query($koneksi,"SELECT * FROM user WHERE id = '$_GET[id]'"); 
 	  $tampil = mysqli_fetch_assoc($ambil);
 
 ?>
@@ -54,7 +54,7 @@ if (isset($_POST['simpan'])) {
 	$password = md5($_POST ['password']);
 	$jenis = $_POST ['jenis_user'];
 
-	mysqli_query($koneksi,"UPDATE user SET nama_lengkap = '$nama', email = '$email', no_telp = '$no_telp', username = '$username', password = '$password', sebagai = '$jenis' WHERE id_user = '$_GET[id]'");
+	mysqli_query($koneksi,"UPDATE user SET nama_lengkap = '$nama', email = '$email', no_telp = '$no_telp', username = '$username', password = '$password', sebagai = '$jenis' WHERE id = '$_GET[id]'");
 	echo "<meta http-equiv='refresh' content='1;url=menu.php?halaman=user'>";
 	echo "<div class='alert alert-success text-center'> Data Berhasil Diedit </div>";
    }

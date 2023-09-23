@@ -1,6 +1,5 @@
 <?php include 'koneksi.php';
   session_start();
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,7 @@
         <title>Login</title>
         <style>
         body{
-            background-image: url(hospital.jpg);
+            /* background-image: url(hospital.jpg); */
             background-repeat: no-repeat;
             background-size: cover;
         }
