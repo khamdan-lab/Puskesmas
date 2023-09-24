@@ -32,7 +32,6 @@ include '../koneksi.php';
 	<div class="form-group">
 		<label for="tangga'"> Tanggal lahir </label>
 		<input type="date" name="tanggal_lahir" class="form-control">
-		
 	</div>
 	<div class="form-group">
 		<label for="agama"> Agama </label>
@@ -55,21 +54,22 @@ include '../koneksi.php';
 	<button class="btn btn-primary" name="simpan"> Simpan </button>
 	<a href="menu.php?halaman=kepala_keluarga" class="btn btn-warning"> Kembali </a>
 
-
 </form>
 <?php  
 if (isset($_POST['simpan'])) {
-	$no_ktp = $_POST ['no_ktp'];
-	$nama = $_POST ['nama'];
-	$jenis = $_POST ['jenis_kelamin'];
-	$tanggal = $_POST ['tanggal_lahir'];
-	$pekerjaan = $_POST ['pekerjaan'];
-	$agama = $_POST ['agama'];
-	$alamat = $_POST ['alamat'];
-	$tinggi = $_POST ['tinggi_badan'];
-	$berat = $_POST ['berat_badan'];
 
-	mysqli_query($koneksi,"INSERT INTO kepala_keluarga (no_ktp, nama, jenis_kelamin, umur, pekerjaan, agama, alamat,tinggi_badan, berat_badan)VALUES('$no_ktp','$nama','$jenis','$tanggal','$pekerjaan','$agama','$alamat','$tinggi','$berat')");
+	$no_ktp 	= $_POST ['no_ktp'];
+	$nama 		= $_POST ['nama'];
+	$jenis 		= $_POST ['jenis_kelamin'];
+	$tanggal 	= $_POST ['tanggal_lahir'];
+	$pekerjaan 	= $_POST ['pekerjaan'];
+	$agama	 	= $_POST ['agama'];
+	$alamat 	= $_POST ['alamat'];
+	$tinggi 	= $_POST ['tinggi_badan'];
+	$berat 		= $_POST ['berat_badan'];
+
+	mysqli_query($koneksi,"INSERT INTO kepala_keluarga (no_ktp, nama, jenis_kelamin, tanggal_lahir, pekerjaan, agama, alamat,tinggi_badan, berat_badan)
+	VALUES('$no_ktp','$nama','$jenis','$tanggal','$pekerjaan','$agama','$alamat','$tinggi','$berat')");
 	echo "<meta http-equiv='refresh' content='1;url=menu.php?halaman=kepala_keluarga'>";
 	echo "<div class='alert alert-success text-center'> Data Berhasil Disimpan </div>";
    }

@@ -1,7 +1,7 @@
 <?php include '../koneksi.php'; ?>
 
 <h2 class="text-center"> Edit Data Kepala Keluarga</h2>
-<?php $ambil = mysqli_query($koneksi,"SELECT * FROM kepala_keluarga WHERE id_kp = '$_GET[id]'");
+<?php $ambil = mysqli_query($koneksi,"SELECT * FROM kepala_keluarga WHERE id = '$_GET[id]'");
 	  $tampil = mysqli_fetch_assoc($ambil);
  ?>
 <!--<pre><?php print_r($tampil); ?></pre>-->
@@ -35,9 +35,8 @@
 		</select>
 	</div>
 	<div class="form-group">
-		<label for="tangga'"> Tanggal lahir </label>
-		<input type="date" name="tanggal_lahir" class="form-control" value="<?php echo $tampil ['umur']; ?>">
-		
+		<label for="tanggal'"> Tanggal lahir </label>
+		<input class="form-control" name="tanggal_lahir" required="" type="date" id="datedepart" aria-required="true" value="<?php echo date('Y-m-d',strtotime($tampil["tanggal_lahir"])) ?>">
 	</div>
 	<div class="form-group">
 		<label for="agama"> Agama </label>
@@ -72,17 +71,18 @@
 </form>
 <?php  
 if (isset($_POST['edit'])) {
-	$no_ktp = $_POST ['no_ktp'];
-	$nama = $_POST ['nama'];
-	$jenis = $_POST ['jenis_kelamin'];
-	$tanggal = $_POST ['tanggal_lahir'];
-	$pekerjaan = $_POST ['pekerjaan'];
-	$agama = $_POST ['agama'];
-	$alamat = $_POST ['alamat'];
-	$tinggi = $_POST ['tinggi_badan'];
-	$berat = $_POST ['berat_badan'];
 
-	mysqli_query($koneksi,"UPDATE kepala_keluarga SET no_ktp = '$no_ktp', nama = '$nama', jenis_kelamin = '$jenis', umur = '$tanggal', pekerjaan = '$pekerjaan', agama = '$agama', alamat = '$alamat', tinggi_badan = '$tinggi', berat_badan = '$berat' WHERE id_kp = '$_GET[id]'");
+	$no_ktp 	= $_POST ['no_ktp'];
+	$nama 		= $_POST ['nama'];
+	$jenis 		= $_POST ['jenis_kelamin'];
+	$tanggal 	= $_POST ['tanggal_lahir'];
+	$pekerjaan 	= $_POST ['pekerjaan'];
+	$agama 		= $_POST ['agama'];
+	$alamat 	= $_POST ['alamat'];
+	$tinggi 	= $_POST ['tinggi_badan'];
+	$berat 		= $_POST ['berat_badan'];
+
+	mysqli_query($koneksi,"UPDATE kepala_keluarga SET no_ktp = '$no_ktp', nama = '$nama', jenis_kelamin = '$jenis', tanggal_lahir = '$tanggal', pekerjaan = '$pekerjaan', agama = '$agama', alamat = '$alamat', tinggi_badan = '$tinggi', berat_badan = '$berat' WHERE id = '$_GET[id]'");
 	echo "<meta http-equiv='refresh' content='1;url=menu.php?halaman=kepala_keluarga'>";
 	echo "<div class='alert alert-success text-center'> Data Berhasil Diupdate </div>";
 

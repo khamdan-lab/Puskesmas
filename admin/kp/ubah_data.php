@@ -3,7 +3,7 @@
 ?>
 <h2 class="text-center"> Ubah Data Kepala Keluarga  </h2>
 
-<?php $ambil= $koneksi->query("SELECT * FROM kepala_keluarga WHERE id_k = '$_GET[id]'");
+<?php $ambil= $koneksi->query("SELECT * FROM kepala_keluarga WHERE id = '$_GET[id]'");
     $tampil = $ambil->fetch_assoc();
 ?>
 
@@ -75,7 +75,7 @@
     
         $koneksi->query("UPDATE kepala_keluarga SET no_ktp = '$no_ktp', nama = '$nama', pekerjaan = '$pekerjaan', alamat = '$alamat',
                         jenis_kelamin = '$jk', umur = '$tanggal', agama = '$agama', tinggi_badan = '$tinggi', berat_badan = '$berat'
-                        WHERE id_k = '$_GET[id]'");
+                        WHERE id = '$_GET[id]'");
 
         echo "<div class='alert alert-success text-center'> Data Berhasil Disimpan </div>";
         echo "<meta http-equiv='refresh' content='1;url=menu.php?halaman=kepala_keluarga'>";

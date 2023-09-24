@@ -9,7 +9,7 @@
         <title>Login</title>
         <style>
         body{
-            /* background-image: url(hospital.jpg); */
+            background-image: url(hospital.jpg);
             background-repeat: no-repeat;
             background-size: cover;
         }

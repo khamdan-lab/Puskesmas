@@ -29,7 +29,7 @@ include '../koneksi.php';
 				<td><?php echo $tampil ['jenis_kelamin']; ?></td>
 				<td><?php
 						// tanggal lahir
-						$tanggal = new DateTime($tampil['umur']);
+						$tanggal = new DateTime($tampil['tanggal_lahir']);
 
 						// tanggal hari ini
 						$today = new DateTime('today');
@@ -47,8 +47,8 @@ include '../koneksi.php';
 				<td><?php echo $tampil ['agama']; ?></td>
 				<td><?php echo $tampil ['tinggi_badan']; ?></td>
 				<td><?php echo $tampil ['berat_badan']; ?></td>
-				<td> <a href="menu.php?halaman=edit_kp&id=<?php echo $tampil ['id_kp'] ?>" class="btn btn-info"> Edit </a>
-					<a href="menu.php?halaman=hapus_kp&id=<?php echo $tampil ['id_kp'] ?>" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
+				<td> <a href="menu.php?halaman=edit_kp&id=<?php echo $tampil ['id'] ?>" class="btn btn-info"> Edit </a>
+					<a href="menu.php?halaman=hapus_kp&id=<?php echo $tampil ['id'] ?>" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
 				</td>
 			</tr>
 		</tbody>
