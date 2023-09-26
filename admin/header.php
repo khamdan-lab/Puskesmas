@@ -57,15 +57,15 @@
             <ul class="list-unstyled components">
                 <li>
                     <a href="menu.php?halaman=user">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-user"></i>
                         User
                     </a>
                     <a href="menu.php?halaman=kepala_keluarga">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-users"></i>
                         Kepala Keluarga
                     </a>
                     <a href="menu.php?halaman=pasien">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-user"></i>
                         Pasien
                     </a>
                     <a href="menu.php?halaman=info">
@@ -73,12 +73,12 @@
                         Rekam Medis
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">
                         <i class="fas fa-paper-plane"></i>
                         Contact
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
@@ -98,15 +98,6 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../keluar.php">Logout</a>
                             </li>

@@ -1,6 +1,6 @@
 <?php include '../koneksi.php'; ?>
 <h2 class="text-center">Data User</h2>
-<table class="table table-bordered text-center">
+<table class="table table-bordered">
 	<thead>
 		<tr>
 			<th> Nama Lengkap </th>
