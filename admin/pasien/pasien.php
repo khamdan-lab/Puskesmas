@@ -24,12 +24,12 @@
 		<tr>
 			<td><?php echo $tampil ['no_ktp'] ?></td>
 			<td><?php echo $tampil ['nama']; ?></td>
-			<td><?php echo $tampil ['nama_kp']; ?></td>
+			<td><?php echo $tampil ['kepala_keluarga_id']; ?></td>
 			<td><?php echo $tampil ['pekerjaan']; ?></td>
 			<td><?php echo $tampil ['alamat']; ?></td>
 			<td><?php echo $tampil ['jenis_kelamin']; ?></td>
 			<td><?php // tanggal lahir
-						$tanggal = new DateTime($tampil['umur']);
+						$tanggal = new DateTime($tampil['tanggal_lahir']);
 
 						// tanggal hari ini
 						$today = new DateTime('today');
@@ -45,17 +45,16 @@
 						echo  $y . " tahun ";
 						?></td>
 			<td><?php echo $tampil ['agama']; ?></td>
-			<td><?php echo $tampil ['tinggi']; ?></td>
-			<td><?php echo $tampil ['berat']; ?></td>
-			<td><?php echo $tampil ['jenis']; ?></td>
+			<td><?php echo $tampil ['tinggi_badan']; ?></td>
+			<td><?php echo $tampil ['berat_badan']; ?></td>
+			<td><?php echo $tampil ['jenis_pasien']; ?></td>
 			<td>
-				<a href="menu.php?halaman=tambah_rekam&id=<?php echo $tampil ['id_pasien'] ?>" class="btn btn-success"> Rekam </a>
-				<a href="menu.php?halaman=edit_pasien&id=<?php echo $tampil ['id_pasien'] ?>" class="btn btn-warning"> Edit </a>
-				<a href="menu.php?halaman=hapus_pasien&id=<?php echo $tampil ['id_pasien'] ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
-
+				<a href="menu.php?halaman=tambah_rekam&id=<?php echo $tampil ['id'] ?>" class="btn btn-success"> Rekam </a>
+				<a href="menu.php?halaman=edit_pasien&id=<?php echo $tampil ['id'] ?>" class="btn btn-warning"> Edit </a>
+				<a href="menu.php?halaman=hapus_pasien&id=<?php echo $tampil ['id'] ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
 			</td>
 		</tr>
 	</tbody>
 	<?php } ?>
 </table>
-<a href="menu.php?halaman=tambah_pasien" class="btn btn-primary"> [+] Tambah Data </a>
+<a href="menu.php?halaman=tambah_pasien" class="btn btn-primary"> [+] Tambah Pasien </a>

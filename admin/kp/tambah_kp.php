@@ -7,7 +7,7 @@ include '../koneksi.php';
 <form action="" method="POST" erctype="mutlipart/form-data">
 	<div class="form-group">
 		<label for="ktp"> No KTP </label>
-		<input type="number" class="form-control" name="no_ktp">
+		<input type="number" class="form-control" name="no_ktp" max_length="16">
 	</div>
 	<div class="form-group">
 		<label for="nama"> Nama </label>

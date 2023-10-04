@@ -3,7 +3,7 @@ include '../koneksi.php';
 ?>
 <div class="">
 	<h2 class="text-center"> Kepala Keluarga </h2>
-	<table class="table table-bordered text-center">
+	<table class="table table-bordered">
 		<thead>
 			<tr>
 				<th> No Ktp </th>
