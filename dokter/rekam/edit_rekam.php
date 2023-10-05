@@ -1,6 +1,6 @@
 <?php include '../koneksi.php'; ?>
 <h2 class="text-center"> Edit Data Rekam </h2>
-<?php $ambil = mysqli_query($koneksi,"SELECT * FROM rekam WHERE id_rekam = '$_GET[id]'");
+<?php $ambil = mysqli_query($koneksi,"SELECT * FROM rekam WHERE id = '$_GET[id]'");
 	  $tampil = mysqli_fetch_assoc($ambil);
  ?>
 

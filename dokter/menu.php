@@ -38,6 +38,8 @@ include 'header.php' ?>
 				include '../dokter/rekam/edit_rekam.php';
 			}elseif ($_GET['halaman'] == 'hapus_rekam'){
 				include '../dokter/rekam/hapus_rekam.php';
+			}elseif ($_GET['halaman'] == 'rekam'){
+				include '../dokter/rekam/rekam.php';
 			}
 		}else{
 			include 'home.php';

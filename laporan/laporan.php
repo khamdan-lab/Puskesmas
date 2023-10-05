@@ -2,9 +2,9 @@
 
 $id = $_GET ['id'];
 
-$ambil = mysqli_query($koneksi,"SELECT * FROM rekam WHERE id_rekam = '$_GET[id]'");
+$ambil = mysqli_query($koneksi,"SELECT * FROM rekam WHERE id = '$_GET[id]'");
 $tampil = mysqli_fetch_assoc($ambil);
-$gabung = mysqli_query($koneksi,"SELECT * FROM rekam INNER JOIN pasien ON rekam.pasien = pasien.nama WHERE id_rekam = '$id'");
+$gabung = mysqli_query($koneksi,"SELECT * FROM rekam INNER JOIN pasien ON rekam.pasien = pasien.nama WHERE id = '$id'");
 $satu = mysqli_fetch_assoc($gabung);
 
 if (!isset($id)) {
